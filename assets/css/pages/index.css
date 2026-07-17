@@ -1,0 +1,138 @@
+/*==================================================
+  ASCEND PRIME
+  Arquivo: assets/css/pages/index.css
+  Descrição: Estilos exclusivos da página inicial
+==================================================*/
+
+/*==========================================
+  HERO
+==========================================*/
+
+.hero{
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    min-height:100vh;
+
+    padding:8rem 0 6rem;
+
+    background:var(--gradient-dark);
+
+}
+
+.hero-content{
+
+    max-width:760px;
+
+    text-align:center;
+
+}
+
+.hero h1{
+
+    margin:2rem 0 1.5rem;
+
+    font-family:var(--font-title);
+    font-size:clamp(3rem,7vw,5.5rem);
+    font-weight:700;
+    line-height:1.1;
+
+}
+
+.hero h1 span{
+
+    color:var(--primary);
+
+}
+
+.hero p{
+
+    max-width:650px;
+
+    margin:0 auto;
+
+    color:var(--text-secondary);
+
+    font-size:1.1rem;
+
+}
+
+.hero-buttons{
+
+    display:flex;
+    justify-content:center;
+    gap:1rem;
+
+    margin-top:3rem;
+
+}
+
+/*==========================================
+  SECTION
+==========================================*/
+
+.section{
+
+    padding:7rem 0;
+
+}
+
+/*==========================================
+  CTA
+==========================================*/
+
+.cta{
+
+    padding:7rem 0;
+
+    text-align:center;
+
+    background:var(--bg-secondary);
+
+}
+
+.cta h2{
+
+    margin-bottom:1rem;
+
+    font-size:2.5rem;
+
+    font-family:var(--font-title);
+
+}
+
+.cta p{
+
+    max-width:650px;
+
+    margin:0 auto 2rem;
+
+    color:var(--text-secondary);
+
+}
+
+/*==========================================
+  HERO BUTTONS MOBILE
+==========================================*/
+
+@media (max-width:768px){
+
+    .hero{
+
+        min-height:auto;
+
+        padding:8rem 0 5rem;
+
+    }
+
+    .hero-buttons{
+
+        flex-direction:column;
+
+        width:100%;
+
+    }
+
+}
