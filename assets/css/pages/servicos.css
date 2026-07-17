@@ -1,0 +1,171 @@
+/*==================================================
+  ASCEND PRIME
+  Arquivo: assets/css/pages/servicos.css
+  Descrição: Estilos exclusivos da página Serviços
+==================================================*/
+
+/*==========================================
+  HERO
+==========================================*/
+
+.hero{
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    min-height:60vh;
+
+    padding:8rem 0 5rem;
+
+    background:var(--gradient-dark);
+
+}
+
+.hero-content{
+
+    max-width:760px;
+
+    text-align:center;
+
+}
+
+.hero h1{
+
+    margin:2rem 0 1.5rem;
+
+    font-family:var(--font-title);
+    font-size:clamp(2.8rem,6vw,5rem);
+    line-height:1.1;
+
+}
+
+.hero p{
+
+    max-width:650px;
+
+    margin:0 auto;
+
+    color:var(--text-secondary);
+
+}
+
+/*==========================================
+  SECTIONS
+==========================================*/
+
+.section{
+
+    padding:6rem 0;
+
+}
+
+.section:nth-child(even){
+
+    background:var(--bg-secondary);
+
+}
+
+/*==========================================
+  SERVICE CARDS
+==========================================*/
+
+.link-card{
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:space-between;
+
+    min-height:320px;
+
+}
+
+.link-card span{
+
+    margin-top:auto;
+
+    color:var(--primary);
+
+    font-weight:600;
+
+}
+
+/*==========================================
+  METHODOLOGY
+==========================================*/
+
+.grid-3 .card{
+
+    height:100%;
+
+}
+
+/*==========================================
+  CTA
+==========================================*/
+
+.cta{
+
+    padding:6rem 0;
+
+    text-align:center;
+
+    background:var(--bg-secondary);
+
+}
+
+.cta h2{
+
+    margin-bottom:1rem;
+
+    font-family:var(--font-title);
+
+    font-size:2.3rem;
+
+}
+
+.cta p{
+
+    max-width:650px;
+
+    margin:0 auto 2rem;
+
+    color:var(--text-secondary);
+
+}
+
+/*==========================================
+  MOBILE
+==========================================*/
+
+@media(max-width:768px){
+
+    .hero{
+
+        min-height:auto;
+
+        padding:7rem 0 4rem;
+
+    }
+
+    .section{
+
+        padding:4rem 0;
+
+    }
+
+    .link-card{
+
+        min-height:auto;
+
+    }
+
+    .cta{
+
+        padding:5rem 0;
+
+    }
+
+}
