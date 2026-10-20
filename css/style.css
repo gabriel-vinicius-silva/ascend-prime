@@ -1,0 +1,1064 @@
+
+/* ==================================================
+   ASCEND PRIME
+   CSS GLOBAL
+================================================== */
+
+
+/* ==================================================
+   1. VARIÁVEIS GLOBAIS
+================================================== */
+
+:root {
+    --color-primary: #16213E;
+    --color-secondary: #E94560;
+    --color-light: #EEEEEE;
+    --color-intermediate: #0F3460;
+
+    --color-white: #FFFFFF;
+    --color-dark: #0B1429;
+    --color-text: #16213E;
+    --color-text-light: #D9E2F2;
+    --color-muted: #64748B;
+
+    --color-border: rgba(15, 52, 96, 0.15);
+    --color-border-dark: rgba(238, 238, 238, 0.15);
+
+    --font-primary: "Inter", Arial, sans-serif;
+
+    --container-width: 1200px;
+    --container-padding: 24px;
+
+    --header-height: 82px;
+
+    --radius-small: 6px;
+    --radius-medium: 12px;
+    --radius-large: 20px;
+
+    --shadow-card: 0 8px 28px rgba(11, 20, 41, 0.08);
+
+    --transition-fast: 0.2s ease;
+    --transition-normal: 0.3s ease;
+}
+
+
+/* ==================================================
+   2. RESET E CONFIGURAÇÕES GERAIS
+================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: calc(var(--header-height) + 20px);
+}
+
+body {
+    min-height: 100vh;
+    font-family: var(--font-primary);
+    background-color: var(--color-light);
+    color: var(--color-text);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+body,
+button,
+input,
+textarea,
+select {
+    font-family: var(--font-primary);
+}
+
+button,
+input,
+textarea,
+select {
+    font-size: inherit;
+}
+
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+button {
+    cursor: pointer;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img,
+picture,
+video,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+img {
+    height: auto;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+p {
+    overflow-wrap: break-word;
+}
+
+::selection {
+    background-color: var(--color-secondary);
+    color: var(--color-white);
+}
+
+
+/* ==================================================
+   3. ACESSIBILIDADE
+================================================== */
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+    outline: 3px solid var(--color-secondary);
+    outline-offset: 4px;
+}
+
+.skip-link {
+    position: absolute;
+    top: -100px;
+    left: 16px;
+    z-index: 9999;
+    padding: 12px 18px;
+    background-color: var(--color-secondary);
+    color: var(--color-white);
+    border-radius: var(--radius-small);
+}
+
+.skip-link:focus {
+    top: 16px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+
+/* ==================================================
+   4. CONTAINER PADRÃO
+================================================== */
+
+.container {
+    width: min(
+        var(--container-width),
+        calc(100% - var(--container-padding) * 2)
+    );
+
+    margin-inline: auto;
+}
+
+.container-fluid {
+    width: 100%;
+    padding-inline: var(--container-padding);
+}
+
+
+/* ==================================================
+   5. CABEÇALHO
+================================================== */
+
+.header {
+    position: relative;
+    z-index: 1000;
+
+    width: 100%;
+    min-height: var(--header-height);
+
+    background-color: var(--color-primary);
+    border-bottom: 1px solid var(--color-border-dark);
+}
+
+.header-content {
+    min-height: var(--header-height);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+
+/* ==================================================
+   6. LOGOTIPO
+================================================== */
+
+.logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    flex-shrink: 0;
+}
+
+.logo-symbol {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 42px;
+    height: 42px;
+
+    color: var(--color-secondary);
+    border: 2px solid var(--color-secondary);
+    border-radius: 10px;
+
+    font-size: 27px;
+    font-weight: 800;
+    line-height: 1;
+
+    transform: skew(-5deg);
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+
+    font-size: 15px;
+    line-height: 1.15;
+    letter-spacing: 3px;
+}
+
+.logo-text strong {
+    color: var(--color-white);
+    font-weight: 700;
+}
+
+.logo-text span {
+    color: var(--color-secondary);
+    font-weight: 700;
+}
+
+
+/* ==================================================
+   7. MENU DE NAVEGAÇÃO
+================================================== */
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    gap: 26px;
+}
+
+.nav-link {
+    position: relative;
+
+    display: inline-flex;
+    align-items: center;
+
+    min-height: 44px;
+
+    color: var(--color-text-light);
+    font-size: 14px;
+    font-weight: 500;
+
+    transition: color var(--transition-fast);
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--color-white);
+}
+
+.nav-link::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: 3px;
+
+    width: 0;
+    height: 2px;
+
+    background-color: var(--color-secondary);
+
+    transition: width var(--transition-fast);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+
+/* ==================================================
+   8. BOTÃO DO MENU MÓVEL
+================================================== */
+
+.menu-toggle {
+    display: none;
+
+    width: 44px;
+    height: 44px;
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 5px;
+
+    background: transparent;
+    border: 1px solid var(--color-border-dark);
+    border-radius: var(--radius-small);
+}
+
+.menu-toggle span {
+    display: block;
+
+    width: 20px;
+    height: 2px;
+
+    background-color: var(--color-white);
+    border-radius: 2px;
+
+    transition:
+        transform var(--transition-fast),
+        opacity var(--transition-fast);
+}
+
+.menu-toggle[aria-expanded="true"] span:first-child {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.menu-toggle[aria-expanded="true"] span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle[aria-expanded="true"] span:last-child {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+
+/* ==================================================
+   9. BOTÕES GERAIS
+================================================== */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    min-height: 46px;
+    padding: 12px 22px;
+
+    border: 1px solid transparent;
+    border-radius: var(--radius-small);
+
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.3;
+    text-align: center;
+
+    cursor: pointer;
+
+    transition:
+        background-color var(--transition-fast),
+        color var(--transition-fast),
+        border-color var(--transition-fast),
+        transform var(--transition-fast);
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+
+/* Botão principal */
+
+.btn-primary {
+    background-color: var(--color-secondary);
+    color: var(--color-white);
+    border-color: var(--color-secondary);
+}
+
+.btn-primary:hover {
+    background-color: #D93652;
+    border-color: #D93652;
+}
+
+
+/* Botão com contorno */
+
+.btn-outline {
+    background-color: transparent;
+    color: var(--color-white);
+    border-color: var(--color-text-light);
+}
+
+.btn-outline:hover {
+    background-color: var(--color-white);
+    color: var(--color-primary);
+    border-color: var(--color-white);
+}
+
+
+/* Botão para áreas claras */
+
+.btn-outline-dark {
+    background-color: transparent;
+    color: var(--color-primary);
+    border-color: var(--color-secondary);
+}
+
+.btn-outline-dark:hover {
+    background-color: var(--color-secondary);
+    color: var(--color-white);
+}
+
+
+/* Botão desabilitado */
+
+.btn:disabled,
+.btn[aria-disabled="true"] {
+    opacity: 0.55;
+    cursor: not-allowed;
+    transform: none;
+}
+
+
+/* ==================================================
+   10. SEÇÕES GERAIS
+================================================== */
+
+.section {
+    padding-block: 80px;
+}
+
+.section-light {
+    background-color: var(--color-light);
+    color: var(--color-primary);
+}
+
+.section-dark {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+.section-blue {
+    background-color: var(--color-intermediate);
+    color: var(--color-white);
+}
+
+
+/* ==================================================
+   11. TÍTULOS E TEXTOS DE SEÇÃO
+================================================== */
+
+.section-label {
+    display: inline-block;
+
+    margin-bottom: 14px;
+
+    color: var(--color-secondary);
+
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    line-height: 1.5;
+    text-transform: uppercase;
+}
+
+.section-heading {
+    max-width: 720px;
+    margin-bottom: 38px;
+}
+
+.section-heading h2 {
+    margin-bottom: 18px;
+
+    color: var(--color-primary);
+
+    font-size: clamp(28px, 4vw, 42px);
+    font-weight: 800;
+    letter-spacing: -1.2px;
+}
+
+.section-heading p {
+    max-width: 650px;
+
+    color: #40516D;
+
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.section-dark .section-heading h2 {
+    color: var(--color-white);
+}
+
+.section-dark .section-heading p {
+    color: var(--color-text-light);
+}
+
+
+/* ==================================================
+   12. CARDS GERAIS
+================================================== */
+
+.card {
+    padding: 26px;
+
+    background-color: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-medium);
+
+    box-shadow: var(--shadow-card);
+
+    transition:
+        transform var(--transition-normal),
+        box-shadow var(--transition-normal),
+        border-color var(--transition-normal);
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(233, 69, 96, 0.45);
+    box-shadow: 0 14px 34px rgba(11, 20, 41, 0.12);
+}
+
+.card h3 {
+    margin-bottom: 12px;
+
+    color: var(--color-primary);
+
+    font-size: 20px;
+}
+
+.card p {
+    color: #52627B;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+
+/* ==================================================
+   13. FORMULÁRIOS GERAIS
+================================================== */
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    margin-bottom: 20px;
+}
+
+.form-label,
+label {
+    color: var(--color-primary);
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.form-control,
+input:not([type="checkbox"]):not([type="radio"]),
+textarea,
+select {
+    width: 100%;
+    min-height: 46px;
+
+    padding: 12px 14px;
+
+    color: var(--color-primary);
+    background-color: var(--color-white);
+
+    border: 1px solid #CBD5E1;
+    border-radius: var(--radius-small);
+
+    outline: none;
+
+    transition:
+        border-color var(--transition-fast),
+        box-shadow var(--transition-fast);
+}
+
+textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+.form-control:focus,
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: var(--color-secondary);
+    box-shadow: 0 0 0 3px rgba(233, 69, 96, 0.12);
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #94A3B8;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    accent-color: var(--color-secondary);
+}
+
+.form-error {
+    color: #C62845;
+    font-size: 13px;
+}
+
+.form-success {
+    padding: 14px 16px;
+
+    color: #166534;
+    background-color: #DCFCE7;
+
+    border: 1px solid #86EFAC;
+    border-radius: var(--radius-small);
+}
+
+
+/* ==================================================
+   14. LINKS GERAIS
+================================================== */
+
+.text-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    color: var(--color-secondary);
+    font-weight: 600;
+
+    transition: color var(--transition-fast);
+}
+
+.text-link:hover {
+    color: #C92F49;
+}
+
+
+/* ==================================================
+   15. RODAPÉ
+================================================== */
+
+.footer {
+    padding-top: 55px;
+
+    background-color: var(--color-dark);
+    color: var(--color-text-light);
+
+    border-top: 1px solid var(--color-border-dark);
+}
+
+.footer-content {
+    display: grid;
+
+    grid-template-columns: 1.3fr 1fr 1fr 1fr;
+
+    gap: 40px;
+
+    padding-bottom: 40px;
+}
+
+.footer-logo {
+    align-self: start;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 12px;
+}
+
+.footer-column h3 {
+    margin-bottom: 8px;
+
+    color: var(--color-white);
+
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.footer-column a {
+    color: #B8C5D9;
+
+    font-size: 13px;
+
+    transition: color var(--transition-fast);
+}
+
+.footer-column a:hover {
+    color: var(--color-secondary);
+}
+
+.footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+    flex-wrap: wrap;
+
+    padding-block: 22px;
+
+    border-top: 1px solid var(--color-border-dark);
+}
+
+.footer-bottom p {
+    color: #A9B7CD;
+    font-size: 12px;
+}
+
+.footer-legal {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-legal a {
+    color: #A9B7CD;
+    font-size: 12px;
+
+    transition: color var(--transition-fast);
+}
+
+.footer-legal a:hover {
+    color: var(--color-white);
+}
+
+
+/* ==================================================
+   16. UTILITÁRIOS
+================================================== */
+
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-light {
+    color: var(--color-light);
+}
+
+.text-muted {
+    color: var(--color-muted);
+}
+
+.text-accent {
+    color: var(--color-secondary);
+}
+
+.bg-primary {
+    background-color: var(--color-primary);
+}
+
+.bg-secondary {
+    background-color: var(--color-secondary);
+}
+
+.bg-intermediate {
+    background-color: var(--color-intermediate);
+}
+
+.bg-light {
+    background-color: var(--color-light);
+}
+
+.mt-1 {
+    margin-top: 8px;
+}
+
+.mt-2 {
+    margin-top: 16px;
+}
+
+.mt-3 {
+    margin-top: 24px;
+}
+
+.mt-4 {
+    margin-top: 32px;
+}
+
+.mb-1 {
+    margin-bottom: 8px;
+}
+
+.mb-2 {
+    margin-bottom: 16px;
+}
+
+.mb-3 {
+    margin-bottom: 24px;
+}
+
+.mb-4 {
+    margin-bottom: 32px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.w-full {
+    width: 100%;
+}
+
+
+/* ==================================================
+   17. RESPONSIVIDADE — TABLETS
+================================================== */
+
+@media (max-width: 1024px) {
+
+    :root {
+        --container-padding: 22px;
+        --header-height: 76px;
+    }
+
+    .nav {
+        gap: 18px;
+    }
+
+    .nav-link {
+        font-size: 13px;
+    }
+
+    .footer-content {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 35px;
+    }
+
+}
+
+
+/* ==================================================
+   18. RESPONSIVIDADE — CELULARES
+================================================== */
+
+@media (max-width: 768px) {
+
+    :root {
+        --container-padding: 18px;
+        --header-height: 72px;
+    }
+
+    .header-content {
+        gap: 15px;
+    }
+
+    .logo-symbol {
+        width: 38px;
+        height: 38px;
+        font-size: 24px;
+    }
+
+    .logo-text {
+        font-size: 13px;
+        letter-spacing: 2px;
+    }
+
+    /* Exibe o botão do menu */
+
+    .menu-toggle {
+        display: flex;
+        flex-shrink: 0;
+    }
+
+    /* Menu móvel */
+
+    .nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+
+        width: 100%;
+        max-height: calc(100vh - var(--header-height));
+        overflow-y: auto;
+
+        padding: 20px var(--container-padding) 26px;
+
+        background-color: var(--color-primary);
+        border-top: 1px solid var(--color-border-dark);
+        border-bottom: 1px solid var(--color-border-dark);
+
+        gap: 6px;
+    }
+
+    .nav.is-open {
+        display: flex;
+    }
+
+    .nav-link {
+        display: flex;
+        align-items: center;
+
+        width: 100%;
+        min-height: 46px;
+
+        font-size: 15px;
+    }
+
+    .nav-link::after {
+        display: none;
+    }
+
+    .nav-login {
+        margin-top: 6px;
+    }
+
+    .nav-register {
+        width: 100%;
+        margin-top: 6px;
+    }
+
+    /* Seções */
+
+    .section {
+        padding-block: 56px;
+    }
+
+    .section-heading {
+        margin-bottom: 28px;
+    }
+
+    .section-heading h2 {
+        font-size: clamp(26px, 7vw, 36px);
+    }
+
+    .section-heading p {
+        font-size: 15px;
+    }
+
+    /* Rodapé */
+
+    .footer {
+        padding-top: 42px;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px 22px;
+    }
+
+    .footer-logo {
+        grid-column: 1 / -1;
+    }
+
+    .footer-bottom {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .footer-legal {
+        flex-wrap: wrap;
+        gap: 12px 18px;
+    }
+
+}
+
+
+/* ==================================================
+   19. RESPONSIVIDADE — CELULARES PEQUENOS
+================================================== */
+
+@media (max-width: 420px) {
+
+    :root {
+        --container-padding: 16px;
+    }
+
+    .logo {
+        gap: 8px;
+    }
+
+    .logo-symbol {
+        width: 34px;
+        height: 34px;
+        font-size: 22px;
+    }
+
+    .logo-text {
+        font-size: 12px;
+        letter-spacing: 1.5px;
+    }
+
+    .section {
+        padding-block: 46px;
+    }
+
+    .btn {
+        max-width: 100%;
+        padding: 12px 16px;
+        font-size: 13px;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .footer-logo {
+        grid-column: auto;
+    }
+
+    .footer-legal {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+}

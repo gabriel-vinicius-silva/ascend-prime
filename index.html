@@ -1,134 +1,181 @@
+
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>ASCEND PRIME — Eleve seu padrão</title>
+    <meta
+        name="description"
+        content="ASCEND PRIME: desenvolvasse"
+    >
 
-    <meta name="description"
-        content="ASCEND PRIME — Uma comunidade de desenvolvimento pessoal focada em evolução mental, física, espiritual e financeira.">
+    <title>ASCEND PRIME | Eleve seu potencial</title>
 
-    <meta name="keywords"
-        content="Ascend Prime, desenvolvimento pessoal, mindset, performance, espiritualidade, prosperidade">
+    <!-- Ícone do site -->
+    <link rel="icon" href="assets/img/logoAscend.png">
 
-    <meta name="author" content="ASCEND PRIME">
+    <!-- Fonte -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <meta name="theme-color" content="#000000">
-
-    <!-- Favicon -->
-    <link rel="icon" href="assets/images/logo/favicon.png">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
 
     <!-- CSS -->
-    <link rel="stylesheet" href="css/global.css">
-    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/home.css">
-    <link rel="stylesheet" href="css/responsive.css">
+
+    <!-- JavaScript -->
+    <script src="js/main.js" defer></script>
 </head>
 
 <body>
 
-    <!-- =====================================================
-         HEADER
-    ====================================================== -->
+    <!-- CABEÇALHO -->
+    <header class="header">
 
-    <header class="header" id="header">
-
-        <div class="container header-container">
+        <div class="container header-content">
 
             <a href="index.html" class="logo">
-                <span class="logo-main">ASCEND</span>
-                <span class="logo-sub">PRIME</span>
+                <span class="logo-symbol">A</span>
+
+                <span class="logo-text">
+                    <strong>ASCEND</strong>
+                    <span>PRIME</span>
+                </span>
             </a>
 
-            <nav class="main-navigation" aria-label="Navegação principal">
+            <button
+                class="menu-toggle"
+                id="menu-toggle"
+                aria-label="Abrir menu"
+                aria-expanded="false"
+                aria-controls="main-nav"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
 
-                <a href="#inicio">Início</a>
-                <a href="#sobre">Quem Somos</a>
-                <a href="#areas">Áreas</a>
-                <a href="#como-funciona">Como Funciona</a>
-                <a href="#equipe">Equipe</a>
-                <a href="#contato">Contato</a>
+            <nav class="nav" id="main-nav">
 
-            </nav>
+                <a href="index.html" class="nav-link active">
+                    Início
+                </a>
 
-            <div class="header-actions">
+                <a href="sobre.html" class="nav-link">
+                    O Projeto
+                </a>
 
-                <a href="pages/login.html" class="btn btn-outline">
+                <a href="contato.html" class="nav-link">
+                    Contato
+                </a>
+
+                <a href="login.html" class="nav-link nav-login">
                     Entrar
                 </a>
 
-                <a href="pages/cadastro.html" class="btn btn-primary">
-                    Fazer parte
+                <a href="login.html#cadastro" class="btn btn-primary nav-register">
+                    Cadastrar
                 </a>
 
-            </div>
-
-            <button class="menu-toggle"
-                id="menu-toggle"
-                aria-label="Abrir menu">
-
-                <span></span>
-                <span></span>
-                <span></span>
-
-            </button>
+            </nav>
 
         </div>
 
     </header>
 
 
+    <!-- CONTEÚDO PRINCIPAL -->
     <main>
 
-        <!-- =====================================================
-             HERO
-        ====================================================== -->
+        <!-- SEÇÃO INICIAL -->
+        <section class="hero">
 
-        <section class="hero" id="inicio">
+            <div class="container hero-content">
 
-            <div class="container hero-container">
+                <div class="hero-text">
 
-                <div class="hero-content">
-
-                    <span class="section-tag">
-                        ELEVE SEU PADRÃO
+                    <span class="section-label">
+                        DESENVOLVIMENTO • DISCIPLINA • PROPÓSITO
                     </span>
 
                     <h1>
-                        Torne-se a melhor
-                        <span>versão de você.</span>
+                        Eleve seu potencial.
+                        <span>Transforme seu futuro.</span>
                     </h1>
 
                     <p>
-                        A ASCEND PRIME é uma comunidade criada para
-                        pessoas que decidiram evoluir de forma completa:
-                        mente, corpo, espírito e prosperidade.
+                        A ASCEND PRIME é um projeto criado para ajudar
+                        você a desenvolver o seu melhor em diferentes
+                        áreas da vida, unindo conhecimento, prática
+                        e propósito.
                     </p>
 
-                    <div class="hero-actions">
+                    <div class="hero-buttons">
 
-                        <a href="#contato" class="btn btn-primary">
+                        <a href="sobre.html" class="btn btn-primary">
+                            Conheça o projeto
+                            <span aria-hidden="true">→</span>
+                        </a>
+
+                        <a href="contato.html" class="btn btn-outline">
                             Quero fazer parte
                         </a>
 
-                        <a href="#sobre" class="btn btn-outline">
-                            Conhecer a ASCEND
-                        </a>
-
                     </div>
 
                 </div>
 
-                <div class="hero-visual">
+                <div class="hero-pillars">
 
-                    <div class="hero-decoration"></div>
+                    <article class="pillar">
+                        <span class="pillar-icon">01</span>
 
-                    <div class="hero-logo">
-                        ASCEND
-                        <span>PRIME</span>
-                    </div>
+                        <div>
+                            <h3>Mindset</h3>
+                            <p>
+                                Mentalidade, disciplina e crescimento pessoal.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="pillar">
+                        <span class="pillar-icon">02</span>
+
+                        <div>
+                            <h3>Performance</h3>
+                            <p>
+                                Produtividade, hábitos e execução.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="pillar">
+                        <span class="pillar-icon">03</span>
+
+                        <div>
+                            <h3>Spiritual</h3>
+                            <p>
+                                Propósito, valores e desenvolvimento espiritual.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="pillar">
+                        <span class="pillar-icon">04</span>
+
+                        <div>
+                            <h3>Prosperity</h3>
+                            <p>
+                                Prosperidade e evolução pessoal e financeira.
+                            </p>
+                        </div>
+                    </article>
 
                 </div>
 
@@ -137,77 +184,71 @@
         </section>
 
 
-        <!-- =====================================================
-             SOBRE
-        ====================================================== -->
-
-        <section class="about section" id="sobre">
+        <!-- O QUE FAZEMOS -->
+        <section class="section section-light" id="o-que-fazemos">
 
             <div class="container">
 
-                <div class="section-header">
+                <div class="section-heading">
 
-                    <span class="section-tag">
-                        SOBRE NÓS
+                    <span class="section-label">
+                        O QUE FAZEMOS
                     </span>
 
                     <h2>
-                        Evolução não acontece por acaso.
+                        Desenvolvimento integral
+                        para uma vida extraordinária.
                     </h2>
 
                     <p>
-                        A ASCEND PRIME existe para ajudar pessoas a
-                        construírem uma vida mais equilibrada,
-                        disciplinada e intencional.
+                        Trabalhamos em quatro áreas fundamentais para
+                        promover o crescimento, fortalecer habilidades
+                        e ajudar cada pessoa a alcançar seu potencial.
                     </p>
 
                 </div>
 
+                <div class="pillars-grid">
 
-                <div class="about-grid">
-
-                    <article class="about-card">
-
+                    <article class="pillar-card">
                         <span class="card-number">01</span>
-
-                        <h3>Missão</h3>
+                        <h3>Mindset</h3>
 
                         <p>
-                            Proporcionar conhecimento, ferramentas,
-                            desafios e uma comunidade que incentive
-                            o desenvolvimento integral de cada pessoa.
+                            Desenvolva uma mentalidade de crescimento,
+                            fortaleça sua disciplina e aprenda a lidar
+                            com desafios.
                         </p>
-
                     </article>
 
-
-                    <article class="about-card">
-
+                    <article class="pillar-card">
                         <span class="card-number">02</span>
-
-                        <h3>Visão</h3>
+                        <h3>Performance</h3>
 
                         <p>
-                            Construir uma comunidade de pessoas
-                            comprometidas com crescimento contínuo
-                            e transformação pessoal.
+                            Melhore sua produtividade, construa hábitos
+                            consistentes e transforme planos em ações.
                         </p>
-
                     </article>
 
-
-                    <article class="about-card">
-
+                    <article class="pillar-card">
                         <span class="card-number">03</span>
-
-                        <h3>Valores</h3>
+                        <h3>Spiritual</h3>
 
                         <p>
-                            Disciplina, responsabilidade, propósito,
-                            constância, evolução e compromisso com
-                            aquilo que realmente importa.
+                            Fortaleça seus valores, aprofunde seu
+                            propósito e desenvolva sua vida espiritual.
                         </p>
+                    </article>
 
+                    <article class="pillar-card">
+                        <span class="card-number">04</span>
+                        <h3>Prosperity</h3>
+
+                        <p>
+                            Amplie sua visão de futuro e desenvolva
+                            conhecimentos para uma vida mais próspera.
+                        </p>
                     </article>
 
                 </div>
@@ -217,346 +258,114 @@
         </section>
 
 
-        <!-- =====================================================
-             4 ÁREAS
-        ====================================================== -->
+        <!-- SOBRE A ASCEND PRIME -->
+        <section class="section section-dark" id="sobre">
 
-        <section class="areas section" id="areas">
+            <div class="container about-content">
 
-            <div class="container">
+                <div class="about-text">
 
-                <div class="section-header">
-
-                    <span class="section-tag">
-                        AS 4 ÁREAS
+                    <span class="section-label">
+                        QUEM SOMOS
                     </span>
 
                     <h2>
-                        Evolua em todas as áreas da sua vida.
+                        Mais que um projeto,
+                        <span>uma missão.</span>
                     </h2>
 
                     <p>
-                        A proposta da ASCEND PRIME é trabalhar
-                        diferentes dimensões do desenvolvimento
-                        pessoal de maneira integrada.
+                        A ASCEND PRIME busca promover o desenvolvimento
+                        integral por meio do conhecimento, da disciplina
+                        e da construção de hábitos positivos.
+                    </p>
+
+                    <p>
+                        Nosso propósito é incentivar pessoas a reconhecer
+                        seu potencial, estabelecer objetivos e construir
+                        um futuro com mais consciência e propósito.
+                    </p>
+
+                    <a href="sobre.html" class="btn btn-outline">
+                        Conheça nossa história
+                        <span aria-hidden="true">→</span>
+                    </a>
+
+                </div>
+
+                <div class="about-highlight">
+
+                    <span class="highlight-mark">ASCEND PRIME</span>
+
+                    <h3>
+                        Pessoas melhores.
+                        <span>Um futuro melhor.</span>
+                    </h3>
+
+                    <p>
+                        Evolução contínua começa com uma decisão.
                     </p>
 
                 </div>
 
-
-                <div class="areas-grid">
-
-                    <!-- MINDSET -->
-
-                    <article class="area-card area-mindset">
-
-                        <div class="area-icon">
-                            M
-                        </div>
-
-                        <span class="area-number">
-                            01
-                        </span>
-
-                        <h3>
-                            ASCEND MINDSET
-                        </h3>
-
-                        <p>
-                            Desenvolvimento mental, disciplina,
-                            inteligência emocional, hábitos,
-                            foco e mentalidade.
-                        </p>
-
-                        <a href="pages/areas/mindset.html">
-                            Explorar área →
-                        </a>
-
-                    </article>
-
-
-                    <!-- PERFORMANCE -->
-
-                    <article class="area-card area-performance">
-
-                        <div class="area-icon">
-                            P
-                        </div>
-
-                        <span class="area-number">
-                            02
-                        </span>
-
-                        <h3>
-                            ASCEND PERFORMANCE
-                        </h3>
-
-                        <p>
-                            Saúde, condicionamento, energia,
-                            desempenho físico e construção
-                            de hábitos saudáveis.
-                        </p>
-
-                        <a href="pages/areas/performance.html">
-                            Explorar área →
-                        </a>
-
-                    </article>
-
-
-                    <!-- SPIRITUAL -->
-
-                    <article class="area-card area-spiritual">
-
-                        <div class="area-icon">
-                            S
-                        </div>
-
-                        <span class="area-number">
-                            03
-                        </span>
-
-                        <h3>
-                            ASCEND SPIRITUAL
-                        </h3>
-
-                        <p>
-                            Propósito, princípios, fé,
-                            espiritualidade e construção
-                            de uma vida com significado.
-                        </p>
-
-                        <a href="pages/areas/spiritual.html">
-                            Explorar área →
-                        </a>
-
-                    </article>
-
-
-                    <!-- PROSPERITY -->
-
-                    <article class="area-card area-prosperity">
-
-                        <div class="area-icon">
-                            $
-                        </div>
-
-                        <span class="area-number">
-                            04
-                        </span>
-
-                        <h3>
-                            ASCEND PROSPERITY
-                        </h3>
-
-                        <p>
-                            Educação financeira, carreira,
-                            organização, planejamento e
-                            desenvolvimento profissional.
-                        </p>
-
-                        <a href="pages/areas/prosperity.html">
-                            Explorar área →
-                        </a>
-
-                    </article>
-
-                </div>
-
             </div>
 
         </section>
 
 
-        <!-- =====================================================
-             COMO FUNCIONA
-        ====================================================== -->
-
-        <section class="how-it-works section" id="como-funciona">
+        <!-- NOSSOS VALORES -->
+        <section class="section section-light" id="valores">
 
             <div class="container">
 
-                <div class="section-header">
+                <div class="section-heading">
 
-                    <span class="section-tag">
-                        COMO FUNCIONA
+                    <span class="section-label">
+                        NOSSOS VALORES
                     </span>
 
                     <h2>
-                        Sua evolução começa com um passo.
-                    </h2>
-
-                </div>
-
-
-                <div class="steps">
-
-                    <article class="step">
-
-                        <span class="step-number">
-                            01
-                        </span>
-
-                        <h3>
-                            Cadastre-se
-                        </h3>
-
-                        <p>
-                            Crie seu perfil e faça parte
-                            da comunidade ASCEND PRIME.
-                        </p>
-
-                    </article>
-
-
-                    <article class="step">
-
-                        <span class="step-number">
-                            02
-                        </span>
-
-                        <h3>
-                            Escolha seu caminho
-                        </h3>
-
-                        <p>
-                            Explore as quatro áreas e
-                            descubra onde começar.
-                        </p>
-
-                    </article>
-
-
-                    <article class="step">
-
-                        <span class="step-number">
-                            03
-                        </span>
-
-                        <h3>
-                            Aprenda e pratique
-                        </h3>
-
-                        <p>
-                            Acesse conteúdos, atividades,
-                            desafios e metas.
-                        </p>
-
-                    </article>
-
-
-                    <article class="step">
-
-                        <span class="step-number">
-                            04
-                        </span>
-
-                        <h3>
-                            Evolua
-                        </h3>
-
-                        <p>
-                            Acompanhe seu progresso,
-                            conquiste XP e avance.
-                        </p>
-
-                    </article>
-
-
-                    <article class="step">
-
-                        <span class="step-number">
-                            05
-                        </span>
-
-                        <h3>
-                            Conquiste
-                        </h3>
-
-                        <p>
-                            Desbloqueie conquistas e
-                            compartilhe sua evolução.
-                        </p>
-
-                    </article>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =====================================================
-             EXPERIÊNCIA
-        ====================================================== -->
-
-        <section class="experience section">
-
-            <div class="container">
-
-                <div class="section-header">
-
-                    <span class="section-tag">
-                        EXPERIÊNCIA ASCEND
-                    </span>
-
-                    <h2>
-                        Mais do que conteúdo.
-                        Uma jornada.
+                        Princípios que nos guiam.
                     </h2>
 
                     <p>
-                        A plataforma foi pensada para transformar
-                        conhecimento em prática e prática em evolução.
+                        Os valores da ASCEND PRIME orientam nossas
+                        decisões, atitudes e a maneira como buscamos
+                        crescer juntos.
                     </p>
 
                 </div>
 
+                <div class="values-grid">
 
-                <div class="experience-grid">
-
-                    <article class="experience-card">
-                        <h3>Cursos</h3>
-                        <p>
-                            Conteúdos organizados para desenvolver
-                            diferentes habilidades.
-                        </p>
+                    <article class="value-item">
+                        <span class="value-icon">01</span>
+                        <h3>Disciplina</h3>
+                        <p>Consistência nas ações e compromisso com o processo.</p>
                     </article>
 
-
-                    <article class="experience-card">
-                        <h3>Desafios</h3>
-                        <p>
-                            Transforme conhecimento em ações
-                            através de desafios práticos.
-                        </p>
+                    <article class="value-item">
+                        <span class="value-icon">02</span>
+                        <h3>Responsabilidade</h3>
+                        <p>Compromisso com nossas escolhas e atitudes.</p>
                     </article>
 
-
-                    <article class="experience-card">
-                        <h3>Metas</h3>
-                        <p>
-                            Defina objetivos e acompanhe sua evolução.
-                        </p>
+                    <article class="value-item">
+                        <span class="value-icon">03</span>
+                        <h3>Integridade</h3>
+                        <p>Honestidade, respeito e coerência em nossas ações.</p>
                     </article>
 
-
-                    <article class="experience-card">
-                        <h3>XP & Conquistas</h3>
-                        <p>
-                            Registre sua evolução através
-                            da gamificação.
-                        </p>
+                    <article class="value-item">
+                        <span class="value-icon">04</span>
+                        <h3>Excelência</h3>
+                        <p>Busca constante por aprendizado e melhoria.</p>
                     </article>
 
-
-                    <article class="experience-card">
-                        <h3>Comunidade</h3>
-                        <p>
-                            Evolua ao lado de pessoas que
-                            possuem objetivos semelhantes.
-                        </p>
+                    <article class="value-item">
+                        <span class="value-icon">05</span>
+                        <h3>Compromisso</h3>
+                        <p>Dedicação ao propósito e à evolução contínua.</p>
                     </article>
 
                 </div>
@@ -566,94 +375,50 @@
         </section>
 
 
-        <!-- =====================================================
-             EQUIPE
-        ====================================================== -->
+        <!-- NOSSOS OBJETIVOS -->
+        <section class="section section-dark" id="objetivos">
 
-        <section class="team section" id="equipe">
+            <div class="container objectives-content">
 
-            <div class="container">
+                <div class="objectives-text">
 
-                <div class="section-header">
-
-                    <span class="section-tag">
-                        NOSSA EQUIPE
+                    <span class="section-label">
+                        NOSSOS OBJETIVOS
                     </span>
 
                     <h2>
-                        Pessoas por trás da ASCEND.
+                        Grandes metas.
+                        <span>Maior impacto.</span>
                     </h2>
 
                     <p>
-                        Conheça as pessoas responsáveis por
-                        construir e conduzir a comunidade.
+                        Queremos incentivar cada aluno a desenvolver
+                        suas capacidades, construir hábitos positivos
+                        e avançar em direção aos seus objetivos.
                     </p>
 
                 </div>
 
+                <div class="objectives-list">
 
-                <div class="team-grid">
-
-                    <article class="team-card">
-
-                        <div class="team-photo">
-                            <!-- Foto futuramente -->
-                        </div>
-
-                        <div class="team-info">
-
-                            <h3>
-                                Nome do integrante
-                            </h3>
-
-                            <span>
-                                Fundador
-                            </span>
-
-                        </div>
-
+                    <article class="objective">
+                        <span>01</span>
+                        <p>Fortalecer a mentalidade e o crescimento pessoal.</p>
                     </article>
 
-
-                    <article class="team-card">
-
-                        <div class="team-photo">
-                            <!-- Foto futuramente -->
-                        </div>
-
-                        <div class="team-info">
-
-                            <h3>
-                                Nome do integrante
-                            </h3>
-
-                            <span>
-                                Especialista
-                            </span>
-
-                        </div>
-
+                    <article class="objective">
+                        <span>02</span>
+                        <p>Desenvolver habilidades práticas e relevantes.</p>
                     </article>
 
+                    <article class="objective">
+                        <span>03</span>
+                        <p>Construir hábitos que favoreçam resultados consistentes.</p>
+                    </article>
 
-                    <article class="team-card">
-
-                        <div class="team-photo">
-                            <!-- Foto futuramente -->
-                        </div>
-
-                        <div class="team-info">
-
-                            <h3>
-                                Nome do integrante
-                            </h3>
-
-                            <span>
-                                Especialista
-                            </span>
-
-                        </div>
-
+                    <article class="objective">
+                        <span>04</span>
+                        <p>Estimular o propósito e gerar impacto positivo.</p>
                     </article>
 
                 </div>
@@ -663,395 +428,29 @@
         </section>
 
 
-        <!-- =====================================================
-             DEPOIMENTOS
-        ====================================================== -->
+        <!-- CHAMADA PARA PARTICIPAR -->
+        <section class="section section-cta">
 
-        <section class="testimonials section">
+            <div class="container cta-content">
 
-            <div class="container">
-
-                <div class="section-header">
-
-                    <span class="section-tag">
-                        DEPOIMENTOS
-                    </span>
-
-                    <h2>
-                        Histórias de evolução.
-                    </h2>
-
-                </div>
-
-
-                <div class="testimonials-grid">
-
-                    <article class="testimonial-card">
-
-                        <p>
-                            "Depoimento de um membro da
-                            comunidade aparecerá aqui."
-                        </p>
-
-                        <span>
-                            — Nome do membro
-                        </span>
-
-                    </article>
-
-
-                    <article class="testimonial-card">
-
-                        <p>
-                            "Depoimento de um membro da
-                            comunidade aparecerá aqui."
-                        </p>
-
-                        <span>
-                            — Nome do membro
-                        </span>
-
-                    </article>
-
-
-                    <article class="testimonial-card">
-
-                        <p>
-                            "Depoimento de um membro da
-                            comunidade aparecerá aqui."
-                        </p>
-
-                        <span>
-                            — Nome do membro
-                        </span>
-
-                    </article>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =====================================================
-             CTA
-        ====================================================== -->
-
-        <section class="cta">
-
-            <div class="container cta-container">
-
-                <span class="section-tag">
-                    ASCEND PRIME
+                <span class="section-label">
+                    SUA JORNADA COMEÇA AQUI
                 </span>
 
                 <h2>
-                    Seu próximo nível começa agora.
+                    O próximo passo
+                    <span>depende de você.</span>
                 </h2>
 
                 <p>
-                    Faça parte de uma comunidade construída
-                    para quem decidiu continuar evoluindo.
+                    Conheça a ASCEND PRIME e descubra como fazer parte
+                    de uma jornada de desenvolvimento e evolução.
                 </p>
 
-                <a href="pages/cadastro.html" class="btn btn-primary">
+                <a href="contato.html" class="btn btn-primary">
                     Quero fazer parte
+                    <span aria-hidden="true">→</span>
                 </a>
-
-            </div>
-
-        </section>
-
-
-        <!-- =====================================================
-             FORMULÁRIO DE INTERESSE
-        ====================================================== -->
-
-        <section class="contact section" id="contato">
-
-            <div class="container">
-
-                <div class="section-header">
-
-                    <span class="section-tag">
-                        FAÇA PARTE
-                    </span>
-
-                    <h2>
-                        Demonstre seu interesse.
-                    </h2>
-
-                    <p>
-                        Deixe seus dados e entraremos em contato
-                        para apresentar a ASCEND PRIME.
-                    </p>
-
-                </div>
-
-
-                <form
-                    class="interest-form"
-                    id="interest-form"
-                    method="POST"
-                    action="/api/interessados"
-                    autocomplete="on"
-                >
-
-                    <div class="form-group">
-
-                        <label for="nome">
-                            Nome
-                        </label>
-
-                        <input
-                            type="text"
-                            id="nome"
-                            name="nome"
-                            placeholder="Seu nome"
-                            required
-                        >
-
-                    </div>
-
-
-                    <div class="form-group">
-
-                        <label for="idade">
-                            Idade
-                        </label>
-
-                        <input
-                            type="number"
-                            id="idade"
-                            name="idade"
-                            placeholder="Sua idade"
-                            min="1"
-                            max="120"
-                            required
-                        >
-
-                    </div>
-
-
-                    <div class="form-group">
-
-                        <label for="whatsapp">
-                            WhatsApp
-                        </label>
-
-                        <input
-                            type="tel"
-                            id="whatsapp"
-                            name="whatsapp"
-                            placeholder="(00) 00000-0000"
-                            required
-                        >
-
-                    </div>
-
-
-                    <div class="form-group">
-
-                        <label for="email">
-                            E-mail
-                        </label>
-
-                        <input
-                            type="email"
-                            id="email"
-                            name="email"
-                            placeholder="seuemail@email.com"
-                            required
-                        >
-
-                    </div>
-
-
-                    <div class="form-group">
-
-                        <label for="area">
-                            Área de interesse
-                        </label>
-
-                        <select
-                            id="area"
-                            name="area_interesse"
-                            required
-                        >
-
-                            <option value="">
-                                Selecione uma área
-                            </option>
-
-                            <option value="mindset">
-                                ASCEND Mindset
-                            </option>
-
-                            <option value="performance">
-                                ASCEND Performance
-                            </option>
-
-                            <option value="spiritual">
-                                ASCEND Spiritual
-                            </option>
-
-                            <option value="prosperity">
-                                ASCEND Prosperity
-                            </option>
-
-                            <option value="todas">
-                                Quero conhecer todas
-                            </option>
-
-                        </select>
-
-                    </div>
-
-
-                    <div class="form-group">
-
-                        <label for="objetivo">
-                            Qual é o seu objetivo?
-                        </label>
-
-                        <textarea
-                            id="objetivo"
-                            name="objetivo"
-                            rows="5"
-                            placeholder="Conte brevemente o que você busca..."
-                            required
-                        ></textarea>
-
-                    </div>
-
-
-                    <div class="form-consent">
-
-                        <input
-                            type="checkbox"
-                            id="lgpd"
-                            name="lgpd"
-                            value="true"
-                            required
-                        >
-
-                        <label for="lgpd">
-
-                            Concordo com o tratamento dos meus
-                            dados conforme a
-                            <a href="pages/politica-privacidade.html">
-                                Política de Privacidade
-                            </a>.
-
-                        </label>
-
-                    </div>
-
-
-                    <button
-                        type="submit"
-                        class="btn btn-primary"
-                    >
-                        Enviar interesse
-                    </button>
-
-                    <div
-                        class="form-message"
-                        id="form-message"
-                        aria-live="polite"
-                    ></div>
-
-                </form>
-
-            </div>
-
-        </section>
-
-
-        <!-- =====================================================
-             FAQ
-        ====================================================== -->
-
-        <section class="faq section">
-
-            <div class="container">
-
-                <div class="section-header">
-
-                    <span class="section-tag">
-                        FAQ
-                    </span>
-
-                    <h2>
-                        Perguntas frequentes.
-                    </h2>
-
-                </div>
-
-
-                <div class="faq-list">
-
-                    <details class="faq-item">
-
-                        <summary>
-                            O que é a ASCEND PRIME?
-                        </summary>
-
-                        <p>
-                            A ASCEND PRIME é uma comunidade de
-                            desenvolvimento pessoal organizada
-                            em quatro áreas de evolução.
-                        </p>
-
-                    </details>
-
-
-                    <details class="faq-item">
-
-                        <summary>
-                            Quais são as quatro áreas?
-                        </summary>
-
-                        <p>
-                            Mindset, Performance, Spiritual
-                            e Prosperity.
-                        </p>
-
-                    </details>
-
-
-                    <details class="faq-item">
-
-                        <summary>
-                            Como posso participar?
-                        </summary>
-
-                        <p>
-                            Você pode demonstrar interesse através
-                            do formulário ou realizar seu cadastro
-                            quando a plataforma estiver disponível.
-                        </p>
-
-                    </details>
-
-
-                    <details class="faq-item">
-
-                        <summary>
-                            A ASCEND PRIME possui uma plataforma?
-                        </summary>
-
-                        <p>
-                            A plataforma está sendo desenvolvida
-                            para reunir conteúdos, desafios,
-                            metas, progresso, gamificação
-                            e comunidade.
-                        </p>
-
-                    </details>
-
-                </div>
 
             </div>
 
@@ -1060,111 +459,66 @@
     </main>
 
 
-    <!-- =====================================================
-         FOOTER
-    ====================================================== -->
-
+    <!-- RODAPÉ -->
     <footer class="footer">
 
         <div class="container">
 
-            <div class="footer-grid">
+            <div class="footer-content">
 
-                <div class="footer-brand">
+                <a href="index.html" class="logo footer-logo">
 
-                    <a href="index.html" class="logo">
-                        <span class="logo-main">ASCEND</span>
-                        <span class="logo-sub">PRIME</span>
-                    </a>
+                    <span class="logo-symbol">A</span>
 
-                    <p>
-                        Eleve seu padrão.
-                    </p>
+                    <span class="logo-text">
+                        <strong>ASCEND</strong>
+                        <span>PRIME</span>
+                    </span>
 
-                </div>
-
+                </a>
 
                 <div class="footer-column">
 
-                    <h3>
-                        Navegação
-                    </h3>
+                    <h3>Links rápidos</h3>
 
-                    <a href="#inicio">
-                        Início
-                    </a>
-
-                    <a href="#sobre">
-                        Quem Somos
-                    </a>
-
-                    <a href="#areas">
-                        Áreas
-                    </a>
-
-                    <a href="#como-funciona">
-                        Como Funciona
-                    </a>
-
-                    <a href="#contato">
-                        Contato
-                    </a>
+                    <a href="index.html">Início</a>
+                    <a href="sobre.html">O Projeto</a>
+                    <a href="contato.html">Contato</a>
 
                 </div>
 
-
                 <div class="footer-column">
 
-                    <h3>
-                        Plataforma
-                    </h3>
+                    <h3>Área do aluno</h3>
 
-                    <a href="pages/login.html">
-                        Entrar
-                    </a>
-
-                    <a href="pages/cadastro.html">
-                        Cadastrar
-                    </a>
+                    <a href="login.html">Entrar</a>
+                    <a href="login.html#cadastro">Cadastrar</a>
+                    <a href="atendimento.html">Atendimento</a>
 
                 </div>
 
-
                 <div class="footer-column">
 
-                    <h3>
-                        Legal
-                    </h3>
+                    <h3>Informações</h3>
 
-                    <a href="pages/politica-privacidade.html">
-                        Política de Privacidade
-                    </a>
-
-                    <a href="pages/termos.html">
-                        Termos de Uso
-                    </a>
+                    <a href="sobre.html#valores">Nossos valores</a>
+                    <a href="sobre.html#objetivos">Nossos objetivos</a>
+                    <a href="contato.html">Fale conosco</a>
 
                 </div>
 
             </div>
 
-
             <div class="footer-bottom">
 
                 <p>
-                    © 2026 ASCEND PRIME. Todos os direitos reservados.
+                    &copy; <span id="current-year">2026</span>
+                    ASCEND PRIME. Todos os direitos reservados.
                 </p>
 
-                <div class="footer-social">
-
-                    <a href="#" aria-label="Instagram">
-                        Instagram
-                    </a>
-
-                    <a href="#" aria-label="WhatsApp">
-                        WhatsApp
-                    </a>
-
+                <div class="footer-legal">
+                    <a href="privacidade.html">Política de Privacidade</a>
+                    <a href="termos.html">Termos de Uso</a>
                 </div>
 
             </div>
@@ -1172,16 +526,6 @@
         </div>
 
     </footer>
-
-
-    <!-- =====================================================
-         JAVASCRIPT
-    ====================================================== -->
-
-    <script src="js/config.js"></script>
-    <script src="js/navigation.js"></script>
-    <script src="js/forms.js"></script>
-    <script src="js/main.js"></script>
 
 </body>
 

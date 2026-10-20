@@ -1,0 +1,1411 @@
+
+/* =========================================================
+   ASCEND PRIME — PÁGINA DE ATENDIMENTO
+   Arquivo: css/atendimento.css
+========================================================= */
+
+
+/* =========================================================
+   1. VARIÁVEIS E CONFIGURAÇÕES
+========================================================= */
+
+.atendimento-page {
+    --atendimento-navy: #16213E;
+    --atendimento-coral: #E94560;
+    --atendimento-light: #EEEEEE;
+    --atendimento-blue: #0F3460;
+
+    --atendimento-background: #F5F7FB;
+    --atendimento-white: #FFFFFF;
+    --atendimento-text: #202A3D;
+    --atendimento-muted: #687386;
+    --atendimento-border: #E0E5EE;
+
+    --atendimento-shadow:
+        0 15px 45px rgba(22, 33, 62, 0.07);
+
+    background: var(--atendimento-background);
+    color: var(--atendimento-text);
+    overflow-x: hidden;
+}
+
+.atendimento-page *,
+.atendimento-page *::before,
+.atendimento-page *::after {
+    box-sizing: border-box;
+}
+
+.atendimento-page a {
+    text-decoration: none;
+}
+
+.atendimento-page button,
+.atendimento-page input,
+.atendimento-page select,
+.atendimento-page textarea {
+    font: inherit;
+}
+
+
+/* =========================================================
+   2. CABEÇALHO
+========================================================= */
+
+.atendimento-header {
+    position: relative;
+    z-index: 20;
+    background: var(--atendimento-white);
+    border-bottom: 1px solid rgba(22, 33, 62, 0.07);
+}
+
+.atendimento-header .header-content {
+    min-height: 82px;
+}
+
+.atendimento-header .logo {
+    flex-shrink: 0;
+}
+
+.atendimento-header .logo-symbol {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 43px;
+    height: 43px;
+
+    border-radius: 12px;
+
+    background: var(--atendimento-navy);
+    color: var(--atendimento-white);
+
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.atendimento-header .logo-text {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.atendimento-header .logo-text strong {
+    color: var(--atendimento-navy);
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+
+.atendimento-header .logo-text > span {
+    color: var(--atendimento-muted);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.atendimento-header .nav {
+    align-items: center;
+}
+
+.atendimento-header .nav-link {
+    transition:
+        color 0.25s ease,
+        background 0.25s ease;
+}
+
+.atendimento-header .nav-link:hover,
+.atendimento-header .nav-link.active {
+    color: var(--atendimento-coral);
+}
+
+.atendimento-header .nav-link.active {
+    font-weight: 700;
+}
+
+.atendimento-header .btn-primary {
+    border-radius: 9px;
+}
+
+
+/* =========================================================
+   3. BOTÕES DA PÁGINA
+========================================================= */
+
+.atendimento-page .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    min-height: 48px;
+    padding: 13px 23px;
+
+    border: 1px solid var(--atendimento-coral);
+    border-radius: 10px;
+
+    background: var(--atendimento-coral);
+    color: var(--atendimento-white);
+
+    font-size: 14px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.atendimento-page .btn-primary:hover {
+    background: #D83250;
+    border-color: #D83250;
+
+    box-shadow: 0 8px 22px rgba(233, 69, 96, 0.22);
+
+    transform: translateY(-2px);
+}
+
+.atendimento-page .btn-primary:focus-visible,
+.atendimento-page a:focus-visible,
+.atendimento-page button:focus-visible {
+    outline: 3px solid rgba(233, 69, 96, 0.35);
+    outline-offset: 4px;
+}
+
+
+/* =========================================================
+   4. APRESENTAÇÃO PRINCIPAL
+========================================================= */
+
+.atendimento-main {
+    width: 100%;
+}
+
+.atendimento-hero {
+    position: relative;
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 82% 30%,
+            rgba(15, 52, 96, 0.8),
+            transparent 32%
+        ),
+        linear-gradient(
+            125deg,
+            var(--atendimento-navy) 0%,
+            #1B2D50 58%,
+            var(--atendimento-blue) 100%
+        );
+
+    color: var(--atendimento-white);
+}
+
+.atendimento-hero::before {
+    position: absolute;
+    top: -180px;
+    right: -100px;
+
+    width: 430px;
+    height: 430px;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 50%;
+
+    content: "";
+    pointer-events: none;
+}
+
+.atendimento-hero::after {
+    position: absolute;
+    right: 12%;
+    bottom: -280px;
+
+    width: 450px;
+    height: 450px;
+
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 50%;
+
+    content: "";
+    pointer-events: none;
+}
+
+.atendimento-hero-content {
+    position: relative;
+    z-index: 1;
+
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr);
+
+    align-items: center;
+    gap: 65px;
+
+    min-height: 410px;
+    padding-top: 65px;
+    padding-bottom: 65px;
+}
+
+.atendimento-hero-text {
+    max-width: 620px;
+}
+
+.atendimento-page .section-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+
+    margin-bottom: 20px;
+
+    color: var(--atendimento-coral);
+
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.atendimento-hero .section-label {
+    color: #FF8194;
+}
+
+.atendimento-hero .section-label::before {
+    width: 23px;
+    height: 2px;
+
+    background: currentColor;
+
+    content: "";
+}
+
+.atendimento-hero h1 {
+    max-width: 650px;
+    margin: 0 0 22px;
+
+    color: var(--atendimento-white);
+
+    font-size: clamp(36px, 4.5vw, 57px);
+    font-weight: 800;
+    line-height: 1.12;
+    letter-spacing: -1.8px;
+}
+
+.atendimento-hero h1 span {
+    display: block;
+    color: #FF7188;
+}
+
+.atendimento-hero-text > p {
+    max-width: 540px;
+    margin: 0 0 30px;
+
+    color: rgba(255, 255, 255, 0.78);
+
+    font-size: 16px;
+    line-height: 1.85;
+}
+
+.atendimento-hero-text .btn-primary {
+    min-height: 51px;
+    padding: 14px 25px;
+}
+
+
+/* =========================================================
+   5. ILUSTRAÇÃO DA APRESENTAÇÃO
+========================================================= */
+
+.atendimento-hero-visual {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 290px;
+}
+
+.support-visual-circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+}
+
+.circle-outer {
+    width: 270px;
+    height: 270px;
+
+    border: 1px solid rgba(255, 255, 255, 0.16);
+
+    background: rgba(255, 255, 255, 0.025);
+}
+
+.circle-middle {
+    width: 205px;
+    height: 205px;
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    background: rgba(255, 255, 255, 0.045);
+}
+
+.support-visual-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    width: 130px;
+    height: 130px;
+
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    border-radius: 35px;
+
+    background: linear-gradient(
+        145deg,
+        rgba(233, 69, 96, 0.95),
+        rgba(233, 69, 96, 0.7)
+    );
+
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+
+    transform: rotate(-5deg);
+}
+
+.support-visual-icon {
+    font-size: 45px;
+    line-height: 1;
+}
+
+.support-visual-center > span:last-child {
+    font-size: 16px;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+.support-floating {
+    position: absolute;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 48px;
+    height: 48px;
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+
+    background: rgba(255, 255, 255, 0.11);
+    color: var(--atendimento-white);
+
+    font-size: 25px;
+    font-weight: 700;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+
+    backdrop-filter: blur(8px);
+}
+
+.support-floating-one {
+    top: 38px;
+    right: 14%;
+}
+
+.support-floating-two {
+    bottom: 35px;
+    left: 12%;
+
+    color: #FF8194;
+}
+
+
+/* =========================================================
+   6. ÁREA PRINCIPAL DE ATENDIMENTO
+========================================================= */
+
+.atendimento-content {
+    position: relative;
+    z-index: 2;
+
+    padding: 75px 0 85px;
+}
+
+.atendimento-layout {
+    display: grid;
+    grid-template-columns: minmax(250px, 0.75fr) minmax(0, 1.25fr);
+
+    align-items: start;
+    gap: 55px;
+}
+
+
+/* =========================================================
+   7. COLUNA DE INFORMAÇÕES
+========================================================= */
+
+.atendimento-info {
+    padding-top: 12px;
+}
+
+.atendimento-info h2 {
+    margin: 0 0 18px;
+
+    color: var(--atendimento-navy);
+
+    font-size: clamp(25px, 3vw, 33px);
+    font-weight: 800;
+    line-height: 1.25;
+    letter-spacing: -0.7px;
+}
+
+.atendimento-info-description {
+    margin: 0 0 30px;
+
+    color: var(--atendimento-muted);
+
+    font-size: 14px;
+    line-height: 1.85;
+}
+
+.atendimento-info-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+
+    margin-bottom: 22px;
+    padding: 18px 16px;
+
+    border: 1px solid var(--atendimento-border);
+    border-radius: 13px;
+
+    background: var(--atendimento-white);
+
+    transition:
+        border-color 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.atendimento-info-card:hover {
+    border-color: rgba(233, 69, 96, 0.35);
+
+    box-shadow: 0 10px 25px rgba(22, 33, 62, 0.045);
+
+    transform: translateY(-3px);
+}
+
+.info-card-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex: 0 0 43px;
+
+    width: 43px;
+    height: 43px;
+
+    border-radius: 12px;
+
+    background: rgba(233, 69, 96, 0.09);
+    color: var(--atendimento-coral);
+
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.atendimento-info-card h3 {
+    margin: 1px 0 7px;
+
+    color: var(--atendimento-navy);
+
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 1.45;
+}
+
+.atendimento-info-card p {
+    margin: 0;
+
+    color: var(--atendimento-muted);
+
+    font-size: 12px;
+    line-height: 1.75;
+}
+
+.atendimento-notice {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+
+    margin-top: 28px;
+    padding: 17px;
+
+    border: 1px solid #D8E3F2;
+    border-radius: 12px;
+
+    background: #EDF4FC;
+}
+
+.atendimento-notice > span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex: 0 0 23px;
+
+    width: 23px;
+    height: 23px;
+
+    border-radius: 50%;
+
+    background: var(--atendimento-blue);
+    color: var(--atendimento-white);
+
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.atendimento-notice p {
+    margin: 0;
+
+    color: #405875;
+
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   8. CARTÃO DO FORMULÁRIO
+========================================================= */
+
+.atendimento-form-card {
+    min-width: 0;
+    padding: 38px;
+
+    border: 1px solid rgba(22, 33, 62, 0.07);
+    border-radius: 20px;
+
+    background: var(--atendimento-white);
+
+    box-shadow: var(--atendimento-shadow);
+
+    scroll-margin-top: 30px;
+}
+
+.atendimento-form-heading {
+    margin-bottom: 30px;
+    padding-bottom: 25px;
+
+    border-bottom: 1px solid var(--atendimento-border);
+}
+
+.atendimento-form-heading .section-label {
+    margin-bottom: 12px;
+}
+
+.atendimento-form-heading h2 {
+    margin: 0 0 10px;
+
+    color: var(--atendimento-navy);
+
+    font-size: clamp(25px, 3vw, 31px);
+    font-weight: 800;
+    line-height: 1.3;
+    letter-spacing: -0.6px;
+}
+
+.atendimento-form-heading p {
+    margin: 0;
+
+    color: var(--atendimento-muted);
+
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   9. ORGANIZAÇÃO DOS CAMPOS
+========================================================= */
+
+#atendimento-form {
+    display: flex;
+    flex-direction: column;
+    gap: 23px;
+}
+
+#atendimento-form .form-row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+#atendimento-form .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+
+    min-width: 0;
+}
+
+#atendimento-form label {
+    color: var(--atendimento-navy);
+
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+#atendimento-form input,
+#atendimento-form select,
+#atendimento-form textarea {
+    display: block;
+
+    width: 100%;
+    min-width: 0;
+
+    border: 1px solid #DCE2EC;
+    border-radius: 9px;
+
+    outline: none;
+
+    background: #FAFBFD;
+    color: var(--atendimento-text);
+
+    font-size: 13px;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+#atendimento-form input,
+#atendimento-form select {
+    min-height: 49px;
+    padding: 12px 14px;
+}
+
+#atendimento-form textarea {
+    min-height: 150px;
+    padding: 15px;
+
+    line-height: 1.75;
+
+    resize: vertical;
+}
+
+#atendimento-form input::placeholder,
+#atendimento-form textarea::placeholder {
+    color: #9AA4B4;
+    opacity: 1;
+}
+
+#atendimento-form input:hover,
+#atendimento-form select:hover,
+#atendimento-form textarea:hover {
+    border-color: #B8C3D5;
+}
+
+#atendimento-form input:focus,
+#atendimento-form select:focus,
+#atendimento-form textarea:focus {
+    border-color: var(--atendimento-coral);
+
+    background: var(--atendimento-white);
+
+    box-shadow: 0 0 0 4px rgba(233, 69, 96, 0.09);
+}
+
+#atendimento-form select {
+    cursor: pointer;
+}
+
+#atendimento-form select:invalid {
+    color: #8993A4;
+}
+
+#atendimento-form option {
+    color: var(--atendimento-text);
+}
+
+
+/* =========================================================
+   10. CONTADOR DE CARACTERES
+========================================================= */
+
+.textarea-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+
+    margin-top: 1px;
+}
+
+.textarea-footer span {
+    color: var(--atendimento-muted);
+
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+#mensagem-contador {
+    flex-shrink: 0;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+}
+
+
+/* =========================================================
+   11. AVISO DE PRIVACIDADE
+========================================================= */
+
+.form-privacy-notice {
+    display: flex;
+    align-items: flex-start;
+    gap: 11px;
+
+    padding: 15px;
+
+    border: 1px solid #E4E9F1;
+    border-radius: 10px;
+
+    background: #F7F9FC;
+}
+
+.form-privacy-notice > span {
+    flex-shrink: 0;
+
+    font-size: 17px;
+    line-height: 1.4;
+}
+
+.form-privacy-notice p {
+    margin: 0;
+
+    color: var(--atendimento-muted);
+
+    font-size: 11px;
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   12. MENSAGEM DE FEEDBACK
+========================================================= */
+
+.atendimento-feedback {
+    display: none;
+
+    padding: 14px 16px;
+
+    border: 1px solid transparent;
+    border-radius: 9px;
+
+    font-size: 13px;
+    line-height: 1.7;
+
+    overflow-wrap: anywhere;
+}
+
+.atendimento-feedback:not(:empty) {
+    display: block;
+}
+
+.atendimento-feedback.success {
+    border-color: #B8E4CB;
+    background: #ECF9F1;
+    color: #176B3A;
+}
+
+.atendimento-feedback.error {
+    border-color: #F1C1C8;
+    background: #FFF0F2;
+    color: #A51D36;
+}
+
+.atendimento-feedback.info {
+    border-color: #C8D9F2;
+    background: #EFF5FF;
+    color: #244C83;
+}
+
+
+/* =========================================================
+   13. BOTÃO DE ENVIO
+========================================================= */
+
+.atendimento-submit {
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between !important;
+    gap: 15px;
+
+    width: 100%;
+    min-height: 54px;
+    padding: 15px 20px !important;
+
+    border-radius: 10px !important;
+
+    font-size: 14px !important;
+}
+
+.atendimento-submit > span:last-child {
+    font-size: 20px;
+    line-height: 1;
+
+    transition: transform 0.2s ease;
+}
+
+.atendimento-submit:hover > span:last-child {
+    transform: translateX(4px);
+}
+
+.atendimento-submit:disabled {
+    cursor: not-allowed;
+    opacity: 0.65;
+
+    transform: none;
+    box-shadow: none;
+}
+
+
+/* =========================================================
+   14. SEÇÃO DE ORIENTAÇÕES
+========================================================= */
+
+.atendimento-faq {
+    padding: 80px 0 90px;
+
+    border-top: 1px solid rgba(22, 33, 62, 0.06);
+
+    background: var(--atendimento-white);
+}
+
+.faq-heading {
+    max-width: 650px;
+    margin: 0 auto 45px;
+
+    text-align: center;
+}
+
+.faq-heading .section-label {
+    justify-content: center;
+}
+
+.faq-heading h2 {
+    margin: 0 0 15px;
+
+    color: var(--atendimento-navy);
+
+    font-size: clamp(27px, 3.5vw, 38px);
+    font-weight: 800;
+    line-height: 1.25;
+    letter-spacing: -0.8px;
+}
+
+.faq-heading > p {
+    margin: 0;
+
+    color: var(--atendimento-muted);
+
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.faq-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 23px;
+}
+
+.faq-card {
+    position: relative;
+
+    min-width: 0;
+    padding: 30px 25px;
+
+    border: 1px solid var(--atendimento-border);
+    border-radius: 15px;
+
+    background: #FCFCFE;
+
+    transition:
+        border-color 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.faq-card:hover {
+    border-color: rgba(233, 69, 96, 0.35);
+
+    box-shadow: 0 14px 32px rgba(22, 33, 62, 0.06);
+
+    transform: translateY(-4px);
+}
+
+.faq-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 43px;
+    height: 43px;
+    margin-bottom: 22px;
+
+    border-radius: 12px;
+
+    background: rgba(233, 69, 96, 0.09);
+    color: var(--atendimento-coral);
+
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+.faq-card h3 {
+    margin: 0 0 12px;
+
+    color: var(--atendimento-navy);
+
+    font-size: 17px;
+    font-weight: 800;
+    line-height: 1.4;
+}
+
+.faq-card p {
+    margin: 0;
+
+    color: var(--atendimento-muted);
+
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+
+/* =========================================================
+   15. RODAPÉ
+========================================================= */
+
+.atendimento-footer {
+    background: var(--atendimento-navy);
+    color: var(--atendimento-white);
+}
+
+.atendimento-footer .footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.atendimento-footer .logo-symbol {
+    background: var(--atendimento-coral);
+    color: var(--atendimento-white);
+}
+
+.atendimento-footer .logo-text strong {
+    color: var(--atendimento-white);
+}
+
+.atendimento-footer .logo-text > span {
+    color: rgba(255, 255, 255, 0.58);
+}
+
+.atendimento-footer .footer-content > p {
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.65);
+
+    font-size: 11px;
+    line-height: 1.8;
+    text-align: center;
+}
+
+.footer-back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+
+    color: var(--atendimento-white);
+
+    font-size: 12px;
+    font-weight: 700;
+
+    transition: color 0.2s ease;
+}
+
+.footer-back-link:hover {
+    color: #FF8194;
+}
+
+
+/* =========================================================
+   16. RESPONSIVIDADE — TABLETS
+========================================================= */
+
+@media (max-width: 1000px) {
+    .atendimento-hero-content {
+        grid-template-columns: minmax(0, 1fr) minmax(230px, 0.8fr);
+        gap: 30px;
+    }
+
+    .atendimento-hero h1 {
+        font-size: clamp(34px, 5vw, 48px);
+    }
+
+    .atendimento-layout {
+        grid-template-columns: minmax(220px, 0.75fr) minmax(0, 1.25fr);
+        gap: 30px;
+    }
+
+    .atendimento-form-card {
+        padding: 28px;
+    }
+
+    .circle-outer {
+        width: 235px;
+        height: 235px;
+    }
+
+    .circle-middle {
+        width: 180px;
+        height: 180px;
+    }
+
+    .support-visual-center {
+        width: 115px;
+        height: 115px;
+    }
+
+    .faq-grid {
+        gap: 16px;
+    }
+
+    .faq-card {
+        padding: 24px 20px;
+    }
+}
+
+
+/* =========================================================
+   17. RESPONSIVIDADE — CELULARES
+========================================================= */
+
+@media (max-width: 760px) {
+    .atendimento-header .header-content {
+        min-height: 72px;
+    }
+
+    .atendimento-header .logo-symbol {
+        width: 39px;
+        height: 39px;
+
+        font-size: 22px;
+    }
+
+    .atendimento-header .logo-text strong {
+        font-size: 13px;
+    }
+
+    .atendimento-header .logo-text > span {
+        font-size: 8px;
+        letter-spacing: 1px;
+    }
+
+    .atendimento-hero-content {
+        grid-template-columns: 1fr;
+        gap: 25px;
+
+        min-height: auto;
+        padding-top: 58px;
+        padding-bottom: 35px;
+    }
+
+    .atendimento-hero-text {
+        max-width: 100%;
+    }
+
+    .atendimento-hero h1 {
+        max-width: 550px;
+        font-size: clamp(35px, 8vw, 47px);
+        letter-spacing: -1px;
+    }
+
+    .atendimento-hero-text > p {
+        font-size: 14px;
+    }
+
+    .atendimento-hero-visual {
+        min-height: 230px;
+    }
+
+    .circle-outer {
+        width: 210px;
+        height: 210px;
+    }
+
+    .circle-middle {
+        width: 160px;
+        height: 160px;
+    }
+
+    .support-visual-center {
+        width: 100px;
+        height: 100px;
+
+        border-radius: 28px;
+    }
+
+    .support-visual-icon {
+        font-size: 36px;
+    }
+
+    .support-floating-one {
+        top: 15px;
+        right: 20%;
+    }
+
+    .support-floating-two {
+        bottom: 15px;
+        left: 18%;
+    }
+
+    .atendimento-content {
+        padding: 50px 0 60px;
+    }
+
+    .atendimento-layout {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .atendimento-info {
+        padding-top: 0;
+    }
+
+    .atendimento-info h2 {
+        max-width: 500px;
+        font-size: 29px;
+    }
+
+    .atendimento-info-description {
+        max-width: 600px;
+    }
+
+    .atendimento-info-card {
+        margin-bottom: 13px;
+    }
+
+    .atendimento-notice {
+        margin-top: 20px;
+    }
+
+    .atendimento-form-card {
+        padding: 27px 22px;
+        border-radius: 16px;
+    }
+
+    .atendimento-form-heading h2 {
+        font-size: 26px;
+    }
+
+    .faq-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .faq-card {
+        padding: 23px;
+    }
+
+    .faq-number {
+        margin-bottom: 15px;
+    }
+
+    .atendimento-faq {
+        padding: 60px 0;
+    }
+
+    .faq-heading {
+        margin-bottom: 30px;
+    }
+
+    .atendimento-footer .footer-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+
+        text-align: center;
+    }
+}
+
+
+/* =========================================================
+   18. RESPONSIVIDADE — CELULARES PEQUENOS
+========================================================= */
+
+@media (max-width: 480px) {
+    .atendimento-hero-content {
+        padding-top: 45px;
+    }
+
+    .atendimento-page .section-label {
+        font-size: 10px;
+        letter-spacing: 1.5px;
+    }
+
+    .atendimento-hero h1 {
+        font-size: 34px;
+    }
+
+    .atendimento-hero-text > p {
+        font-size: 13px;
+        line-height: 1.8;
+    }
+
+    .atendimento-hero-text .btn-primary {
+        width: 100%;
+    }
+
+    .atendimento-hero-visual {
+        min-height: 205px;
+    }
+
+    .circle-outer {
+        width: 185px;
+        height: 185px;
+    }
+
+    .circle-middle {
+        width: 140px;
+        height: 140px;
+    }
+
+    .support-visual-center {
+        width: 90px;
+        height: 90px;
+    }
+
+    .support-floating {
+        width: 40px;
+        height: 40px;
+
+        border-radius: 12px;
+        font-size: 21px;
+    }
+
+    .atendimento-content {
+        padding-top: 40px;
+        padding-bottom: 45px;
+    }
+
+    .atendimento-info h2 {
+        font-size: 26px;
+    }
+
+    .atendimento-info-card {
+        gap: 12px;
+        padding: 15px 13px;
+    }
+
+    .info-card-icon {
+        flex-basis: 38px;
+
+        width: 38px;
+        height: 38px;
+
+        font-size: 19px;
+    }
+
+    .atendimento-form-card {
+        padding: 23px 17px;
+    }
+
+    .atendimento-form-heading {
+        margin-bottom: 25px;
+        padding-bottom: 20px;
+    }
+
+    .atendimento-form-heading h2 {
+        font-size: 24px;
+    }
+
+    #atendimento-form {
+        gap: 20px;
+    }
+
+    #atendimento-form .form-row {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    #atendimento-form input,
+    #atendimento-form select {
+        min-height: 47px;
+    }
+
+    #atendimento-form textarea {
+        min-height: 135px;
+    }
+
+    .textarea-footer {
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .textarea-footer span {
+        font-size: 10px;
+    }
+
+    .form-privacy-notice {
+        padding: 12px;
+    }
+
+    .atendimento-submit {
+        min-height: 51px;
+    }
+
+    .faq-heading h2 {
+        font-size: 27px;
+    }
+
+    .faq-heading > p {
+        font-size: 13px;
+    }
+
+    .atendimento-footer .footer-content > p {
+        max-width: 280px;
+    }
+}
+
+
+/* =========================================================
+   19. ACESSIBILIDADE — MOVIMENTO REDUZIDO
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+    .atendimento-page *,
+    .atendimento-page *::before,
+    .atendimento-page *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+
+/* =========================================================
+   FIM DO CSS — ASCEND PRIME
+========================================================= */
